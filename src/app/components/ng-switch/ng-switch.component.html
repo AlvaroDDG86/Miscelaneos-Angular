@@ -1,0 +1,9 @@
+
+
+<div [ngSwitch]="alerta">
+  <div class="alert alert-success" *ngSwitchCase="'success'" role="alert">success</div>
+  <div class="alert alert-info" *ngSwitchCase="'info'" role="alert">info</div>
+  <div class="alert alert-danger" *ngSwitchCase="'danger'" role="alert">danger</div>
+  <div class="alert alert-warning" *ngSwitchCase="'warning'" role="alert">warning</div>
+  <div class="alert alert-default" *ngSwitchDefault role="alert">default</div>
+</div>

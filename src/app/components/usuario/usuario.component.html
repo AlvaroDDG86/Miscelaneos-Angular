@@ -1,0 +1,11 @@
+<h1 [appResaltado]="'orange'">Usuario</h1>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <div class="btn-group" role="group">
+        <button [routerLink]="['nuevo']" type="button" routerLinkActive="active" class="btn btn-outline-success"><i class="fa fa-plus"></i> Nuevo</button>
+        <button [routerLink]="['editar']" type="button" routerLinkActive="active" class="btn btn-outline-info"><i class="fa fa-pencil"></i> Editar</button>
+        <button [routerLink]="['detalle']" type="button" routerLinkActive="active" class="btn btn-outline-danger"><i class="fa fa-info"></i> Detalle</button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

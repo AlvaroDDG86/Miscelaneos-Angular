@@ -1,0 +1,34 @@
+<div [ngClass]="alerta" class="alert">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolore? Optio maxime corporis temporibus inventore asperiores quis? In itaque, doloribus numquam eius voluptatum aut dolores ullam velit id cum! Iste!</p>
+</div>
+<button type="button" (click)="alerta = 'alert-info'" class="btn btn-outline-info">
+  info
+</button>
+<button type="button" (click)="alerta = 'alert-success'" class="btn btn-outline-success">
+  success
+</button>
+<button type="button" (click)="alerta = 'alert-danger'" class="btn btn-outline-danger">
+  danger
+</button>
+<br/>
+<h3 [ngClass]="{'text-danger':propiedades.danger, 'text-info':!propiedades.danger}">
+  Hola mundo
+</h3>
+<button type="button" 
+      (click)="propiedades.danger = !propiedades.danger"
+      class="btn"
+      [ngClass]="{'btn-outline-danger':propiedades.danger, 'btn-outline-info':!propiedades.danger}">
+  Cambiar
+</button>
+
+<br />
+<br />
+
+<button type="button" 
+(click)="ejecutar()"
+class="btn btn-success"
+[disabled]="loading">
+<i class="fa" [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin':loading}"></i>
+<span *ngIf="!loading">Guardar cambios</span>
+<span *ngIf="loading">Cargando</span> 
+</button>
